@@ -13,8 +13,8 @@
 body{
     font-family: 'BeVietnam', Arial, Helvetica, sans-serif;
 }
-header nav, header a, .container_cards .items_cards.one,
-.container_cards .items_cards.three {
+header nav, header a, .container_cards .items_cards:nth-child(odd),
+.container_cards {
    display: none;
 }
 header{
@@ -191,6 +191,7 @@ footer{
     padding: 11px 14px;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 .container_footer form button::before{
     content: '🔥 ';
@@ -212,6 +213,9 @@ footer{
     text-decoration: none;
     color: #fff;
 }
+.container_footer nav ul li a:hover{
+    color: #B3B2B7;
+}
 .content_socialMedia{
     display: flex;
     flex-direction: column-reverse;
@@ -229,9 +233,9 @@ footer p{
     text-align: center;
     font-size: 12px;
 }
-@media (min-width: 768px) {
-    header nav, header a, .container_cards .items_cards.one,
-    .container_cards .items_cards.three {
+@media (min-width: 1024px) {
+    header nav, header a, .container_cards .items_cards:nth-child(odd),
+    .container_cards {
         display: flex;
      }
      header .img_hambur{
